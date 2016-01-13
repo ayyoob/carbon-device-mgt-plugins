@@ -64,16 +64,15 @@ public class ApisAppClient {
 	private ApisAppClient() {
 		ApiManagerConfig apiManagerConfig =
 				DeviceManagementConfigurationManager.getInstance().getDeviceCloudMgtConfig().getApiManager();
-		String serverUrl=apiManagerConfig.getServerURL();
-		String serverPort=apiManagerConfig.getServerPort();
+		String serverUrl = apiManagerConfig.getServerURL();
+		String serverPort = apiManagerConfig.getServerPort();
 		isApiManagerEnabled = apiManagerConfig.isEnabled();
-
-		String loginURL = serverUrl+":"+serverPort+apiManagerConfig.getLoginURL();
-		loginEndpoint= loginURL+"?action=login&username="+apiManagerConfig.getUsername()
-				+"&password="+apiManagerConfig.getPassword();
-
-		String subscriptionListUrl=serverUrl+":"+serverPort+apiManagerConfig.getSubscriptionListURL();
-		subscriptionListEndpoint=subscriptionListUrl+"?action=getAllSubscriptions";
+		String loginUrl = serverUrl + ":" + serverPort + apiManagerConfig.getLoginURL();
+		loginEndpoint = loginUrl + "?action=login&username=" + apiManagerConfig.getUsername()
+				+ "&password=" + apiManagerConfig.getPassword();
+		String subscriptionListUrl =
+				serverUrl + ":" + serverPort + apiManagerConfig.getSubscriptionListURL();
+		subscriptionListEndpoint = subscriptionListUrl + "?action=getAllSubscriptions";
 	}
 
 	public String getBase64EncodedConsumerKeyAndSecret(String deviceType) {
