@@ -190,7 +190,7 @@ public class FireAlarmXMPPCommunicator extends XMPPTransportHandler {
                 try {
                     int currentTemperature = agentManager.getTemperature();
 
-                    String message = AgentConstants.TEMPERATURE_CONTROL + ":" + currentTemperature;
+                    String message = username + "," + AgentConstants.TEMPERATURE_CONTROL + ":" + currentTemperature;
                     String payLoad = AgentUtilOperations.prepareSecurePayLoad(message);
 
                     xmppMessage.setTo(xmppAdminJID);

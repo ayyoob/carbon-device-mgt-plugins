@@ -39,4 +39,9 @@
         <param-value>admin</param-value>
     </context-param>
 
+    <listener>
+        <listener-class>
+            org.wso2.carbon.device.mgt.iot.virtualfirealarm.api.listener.EventListener
+        </listener-class>
+    </listener>
 </web-app>

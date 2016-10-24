@@ -236,8 +236,18 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.wso2.carbon.analytics-common</groupId>
+			<artifactId>org.wso2.carbon.event.input.adapter.core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.wso2.carbon.devicemgt-plugins</groupId>
-			<artifactId>org.wso2.carbon.device.mgt.iot.virtualfirealarm.plugin</artifactId>
+			<artifactId>org.wso2.carbon.device.mgt.iot.input.adapter.extension</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.osgi</groupId>
+			<artifactId>org.eclipse.osgi</artifactId>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>

@@ -208,7 +208,8 @@ public class FireAlarmMQTTCommunicator extends MQTTTransportHandler {
             @Override
             public void run() {
                 int currentTemperature = agentManager.getTemperature();
-                String message = "PUBLISHER:" + AgentConstants.TEMPERATURE_CONTROL + ":" + currentTemperature;
+                String message = agentManager.getAgentConfigs().getDeviceId() + ", PUBLISHER:"
+                        + AgentConstants.TEMPERATURE_CONTROL + ":" + currentTemperature;
 
                 try {
                     String payLoad = AgentUtilOperations.prepareSecurePayLoad(message);
